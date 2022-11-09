@@ -1,3 +1,7 @@
+//time set
+const d = new Date();
+document.getElementById("demo").innerHTML = d;
+
 let addNameBtn = document.querySelector("#addBtn");
 addNameBtn.addEventListener("click", addName);
 
@@ -22,12 +26,6 @@ function addName() {
     editBtn.classList = "editBtn";
     editBtn.addEventListener("click", editValue);
 
-    // // create delete btn
-    // let delBtn = document.createElement("button");
-    // delBtn.textContent = "Delete";
-    // delBtn.classList = "delBtn";
-    // delBtn.addEventListener("click", delValue);
-
     // append child nodes
     nameList.appendChild(nameItem);
     nameItem.appendChild(nameInput);
@@ -51,7 +49,7 @@ function addName() {
 
 
         function saveValue() {
-            let text = "Are you sure you want to save " + nameInput.value + " as name?";
+            let text = "Are you sure you want to save?";
 
             if (confirm(text) == true) {
                 //enable edit button again
@@ -90,9 +88,5 @@ function addName() {
             }
             alert(text);
         }
-
     }
 }
-
-
-
